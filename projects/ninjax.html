@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ninjax Inventory &amp; POS — Shawn Mbuvi</title>
+<title>Ninjax — SaaS Inventory &amp; POS Platform — Shawn Mbuvi</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -17,36 +17,220 @@
 
 <header class="cs-hero">
   <div class="wrap">
-    <span class="status-badge">Product</span>
-    <h1>Ninjax — inventory &amp; POS platform</h1>
-    <p>A subscription-based inventory management and point-of-sale system, split into an admin
-       portal for the business and a client-facing portal for day-to-day sales and stock operations.</p>
+    <span class="status-badge">Live · Multi-tenant SaaS</span>
+    <h1>Ninjax — inventory &amp; POS licensing platform</h1>
+    <p>A subscription-licensed inventory and point-of-sale system for retail businesses, built as three
+       connected surfaces: an inventory/POS admin app each business runs day to day, a client portal for
+       managing their subscription, and a separate internal console Ninjax uses to license and support
+       every business on the platform.</p>
 
     <div class="stat-strip">
-      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Portals (admin + client)</div></div>
-      <div class="stat"><div class="stat-num">React</div><div class="stat-label">Frontend</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Connected apps</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Pricing plans</div></div>
+      <div class="stat"><div class="stat-num">2+</div><div class="stat-label">Store locations per client</div></div>
+      <div class="stat"><div class="stat-num">M-Pesa</div><div class="stat-label">+ Card, Cash, Credit</div></div>
     </div>
   </div>
 </header>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">01</span><h2>Overview</h2></div>
-    <div class="placeholder-note">This page is the thinnest of the three — I only have "subscription admin and client portal
-      React projects" to go on. Send me: what the system actually does day-to-day (stock tracking?
-      sales/receipts? multi-branch?), the backend stack, screenshots, and any real numbers
-      (users, transactions processed, branches supported), and I'll fill this out properly.</div>
-    <div class="shot"><span class="shot-label">Admin portal — screenshot placeholder</span></div>
-    <div class="shot"><span class="shot-label">Client / POS screen — screenshot placeholder</span></div>
+    <div class="section-head"><span class="section-num">01</span><h2>Inventory &amp; POS admin</h2></div>
+    <p class="section-note">What a licensed business runs day to day — stock, till, sales, multi-store finance, and staff access, all under one roof.</p>
+
+    <div class="shot-img">
+      <img src="../assets/ninjax/admin-dashboard.png" alt="Ninjax inventory admin — Dashboard">
+      <div class="shot-caption">
+        <div><h5>Dashboard</h5><p>Items, categories, low-stock alerts, and recently updated stock at a glance.</p></div>
+        <span class="shot-route">admin.[client].co.ke/dashboard</span>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-items.png" alt="Ninjax inventory admin — Items">
+        <div class="shot-caption">
+          <div><h5>Items</h5><p>Add, edit, and browse inventory with live quantity, category, and pricing.</p></div>
+          <span class="shot-route">/items</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-photos-features.png" alt="Ninjax inventory admin — Photos & Features">
+        <div class="shot-caption">
+          <div><h5>Photos &amp; Features</h5><p>Per-item main photo, gallery angles, and a structured spec/feature list for storefront display.</p></div>
+          <span class="shot-route">/photos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shot-img">
+      <img src="../assets/ninjax/admin-till.png" alt="Ninjax inventory admin — Till">
+      <div class="shot-caption">
+        <div><h5>Till</h5><p>Barcode/SKU scan-to-sell with camera or manual entry, live cart totals with tax, and four payment
+           paths: Card, Cash, M-Pesa, or On Account (credit).</p></div>
+        <span class="shot-route">/till</span>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-sales.png" alt="Ninjax inventory admin — Sales">
+        <div class="shot-caption">
+          <div><h5>Sales</h5><p>Full sales history filterable by store, status, and date range, with Excel and PDF export.</p></div>
+          <span class="shot-route">/sales</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-stores.png" alt="Ninjax inventory admin — Stores">
+        <div class="shot-caption">
+          <div><h5>Stores</h5><p>Multi-location support — every store feeds the same till location list and sales/finance reporting.</p></div>
+          <span class="shot-route">/stores</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-profit-loss.png" alt="Ninjax inventory admin — Profit & Loss">
+        <div class="shot-caption">
+          <div><h5>Profit &amp; Loss</h5><p>Revenue and expenses for any date range, coded by account (e.g. 4000 Sales Revenue), with net income and export.</p></div>
+          <span class="shot-route">/profit-loss</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-expenses.png" alt="Ninjax inventory admin — Expenses">
+        <div class="shot-caption">
+          <div><h5>Expenses</h5><p>Categorized expense recording (accounting codes, payment method, location), feeding straight into P&amp;L.</p></div>
+          <span class="shot-route">/expenses</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-roles-rights.png" alt="Ninjax inventory admin — Roles & Rights">
+        <div class="shot-caption">
+          <div><h5>Roles &amp; Rights</h5><p>Permission-string access control (e.g. <code>pos.sell</code>, <code>accounting.manage</code>) across Administrator, Senior Staff, and Staff roles.</p></div>
+          <span class="shot-route">/roles</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/ninjax/admin-users.png" alt="Ninjax inventory admin — Users">
+        <div class="shot-caption">
+          <div><h5>Users</h5><p>Register staff, assign roles, track last login, and deactivate accounts.</p></div>
+          <span class="shot-route">/users</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">02</span><h2>Under the hood</h2></div>
-    <div class="ledger-row"><span class="ledger-label">Frontend</span><span class="ledger-leader"></span><span class="ledger-value">React</span></div>
-    <div class="ledger-row"><span class="ledger-label">Backend</span><span class="ledger-leader"></span><span class="ledger-value">TBC</span></div>
-    <div class="ledger-row"><span class="ledger-label">Database</span><span class="ledger-leader"></span><span class="ledger-value">TBC</span></div>
+    <div class="section-head"><span class="section-num">02</span><h2>Client portal</h2></div>
+    <p class="section-note">What the licensed business owner sees — their own subscription, not their inventory.</p>
+
+    <div class="shot-img">
+      <img src="../assets/ninjax/client-portal-dashboard.png" alt="Ninjax client portal — subscription dashboard">
+      <div class="shot-caption">
+        <div><h5>Subscription &amp; Activation</h5><p>Current plan, days remaining, renewal via M-Pesa/bank transfer with reference tracking, payment history, and the activation key used to unlock the installed POS software.</p></div>
+        <span class="shot-route">client.[client].co.ke/dashboard</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">03</span><h2>Subscription admin (Ninjax's own console)</h2></div>
+    <p class="section-note">Internal tool for Ninjax Technologies to license, price, and support every business on the platform. No self sign-up — clients are provisioned directly.</p>
+
+    <div class="shot-img">
+      <img src="../assets/ninjax/subadmin-clients.png" alt="Ninjax subscription admin — Clients">
+      <div class="shot-caption">
+        <div><h5>Clients</h5><p>Every licensed business, their plan, subscription status, renewal date, and activation key state, with per-client suspend/email/reset actions.</p></div>
+        <span class="shot-route">subscriptionadmin.[domain]/clients</span>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/ninjax/subadmin-plans.png" alt="Ninjax subscription admin — Plans">
+        <div class="shot-caption">
+          <div><h5>Plans</h5><p>Owner Account, Basic Ninja, and Pro Ninja — each with its own price and billing cycle length, editable without a deploy.</p></div>
+          <span class="shot-route">/plans</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/ninjax/subadmin-support.png" alt="Ninjax subscription admin — Support ticket thread">
+        <div class="shot-caption">
+          <div><h5>Support</h5><p>Threaded conversations per client, open/closed status — Ninjax's direct line to every licensed business.</p></div>
+          <span class="shot-route">/support/:id</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">04</span><h2>What it does</h2></div>
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feature-mark">01</div>
+        <div>
+          <h4>Three surfaces, one licensing model</h4>
+          <p>The inventory/POS app, the client's own subscription portal, and Ninjax's internal admin
+             are separate apps with separate audiences, but all key off the same subscription and
+             activation-key state — a lapsed subscription locks premium POS features until renewed.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">02</div>
+        <div>
+          <h4>Provisioned, not self-serve</h4>
+          <p>New clients are added directly by Ninjax through the subscription admin console — there's
+             no public sign-up flow, keeping onboarding and plan assignment fully controlled.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">03</div>
+        <div>
+          <h4>Accounting-grade P&amp;L from POS activity</h4>
+          <p>Sales revenue and recorded expenses are both coded to accounting categories (e.g. 4000
+             Sales Revenue, 6200 Utilities), so the Profit &amp; Loss report is a direct roll-up of real
+             till and expense activity rather than a separate manual entry.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">04</div>
+        <div>
+          <h4>Permission-string role model</h4>
+          <p>Rights like <code>items.manage</code>, <code>pos.sell</code>, and <code>accounting.manage</code>
+             are assigned per role rather than hardcoded to a role name, so a business can shape what
+             "Senior Staff" or "Staff" can actually touch.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">05</div>
+        <div>
+          <h4>Multi-location till and reporting</h4>
+          <p>Sales, expenses, and stock all carry a store location, so a business running several
+             outlets gets both per-store and consolidated views without separate installs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">05</span><h2>Under the hood</h2></div>
+    <div class="ledger-row"><span class="ledger-label">Frontend (all three apps)</span><span class="ledger-leader"></span><span class="ledger-value">React</span></div>
+    <div class="ledger-row"><span class="ledger-label">API</span><span class="ledger-leader"></span><span class="ledger-value">REST</span></div>
+    <div class="ledger-row"><span class="ledger-label">Database</span><span class="ledger-leader"></span><span class="ledger-value">MySQL</span></div>
+    <div class="ledger-row"><span class="ledger-label">Payments</span><span class="ledger-leader"></span><span class="ledger-value">M-Pesa · Card · Cash · Bank transfer</span></div>
+    <div class="ledger-row"><span class="ledger-label">Licensing</span><span class="ledger-leader"></span><span class="ledger-value">Per-client activation key, subscription-gated</span></div>
   </div>
 </section>
 
