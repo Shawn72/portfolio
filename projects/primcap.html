@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primcap Staff Portal — Shawn Mbuvi</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark">S. MBUVI <span>/ ENGINEER</span></a>
+    <a href="../index.html" class="nav-back">← All work</a>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <span class="status-badge">Internal · In active use</span>
+    <h1>Primcap — internal staff portal</h1>
+    <p>An internal operations portal used by staff day-to-day, with a role- and widget-level visibility
+       system so each staff member's sidebar and dashboard show only what their line of work needs.</p>
+
+    <div class="stat-strip">
+      <div class="stat"><div class="stat-num">.NET</div><div class="stat-label">API backend</div></div>
+      <div class="stat"><div class="stat-num">React</div><div class="stat-label">Vite frontend</div></div>
+      <div class="stat"><div class="stat-num">2-tier</div><div class="stat-label">Menu + widget visibility</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">01</span><h2>Overview</h2></div>
+    <div class="placeholder-note">Placeholder — swap in your real screenshots and stat numbers once you send them over.</div>
+    <div class="shot"><span class="shot-label">Staff dashboard — screenshot placeholder</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">02</span><h2>What it does</h2></div>
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feature-mark">01</div>
+        <div>
+          <h4>Widget-level dashboard control</h4>
+          <p>Visibility control goes beyond hiding whole sidebar sections — individual stat cards and
+             charts on the staff home dashboard can be configured on or off per user, so a dashboard
+             genuinely fits the role viewing it.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">02</div>
+        <div>
+          <h4>Fail-closed menu registration</h4>
+          <p>Every new top-level sidebar section is deliberately hidden from everyone until explicitly
+             seeded into the visibility table — new features can't accidentally leak to staff who
+             shouldn't see them yet.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">03</div>
+        <div>
+          <h4>Line-based access model</h4>
+          <p>Staff visibility is scoped by line number rather than a flat role field, matching how the
+             organization actually assigns responsibilities.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">03</span><h2>Under the hood</h2></div>
+    <div class="ledger-row"><span class="ledger-label">Backend API</span><span class="ledger-leader"></span><span class="ledger-value">ASP.NET Core (.NET)</span></div>
+    <div class="ledger-row"><span class="ledger-label">Database</span><span class="ledger-leader"></span><span class="ledger-value">SQL Server</span></div>
+    <div class="ledger-row"><span class="ledger-label">Frontend</span><span class="ledger-leader"></span><span class="ledger-value">React · Vite</span></div>
+    <div class="ledger-row"><span class="ledger-label">Infrastructure</span><span class="ledger-leader"></span><span class="ledger-value">IIS on Windows Server · Azure DevOps CI/CD</span></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:16px">
+    <a href="blueeagle.html" class="nav-back">← Blue Eagle SACCO</a>
+    <a href="ninjax.html" class="footer-mono">Next: Ninjax Inventory &amp; POS →</a>
+  </div>
+</footer>
+
+</body>
+</html>

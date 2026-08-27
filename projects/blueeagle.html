@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Eagle SACCO — Shawn Mbuvi</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="../index.html" class="nav-mark">S. MBUVI <span>/ ENGINEER</span></a>
+    <a href="../index.html" class="nav-back">← All work</a>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="wrap">
+    <span class="status-badge">Live in production</span>
+    <h1>Blue Eagle SACCO — admin &amp; member portals</h1>
+    <p>A full-stack platform for a savings and credit cooperative: an internal admin portal for staff
+       operations and a member-facing portal, both backed by a shared .NET 8 API integrated directly
+       with the SACCO's Microsoft Dynamics NAV / Business Central database.</p>
+
+    <div class="stat-strip">
+      <div class="stat"><div class="stat-num">382</div><div class="stat-label">Portal member accounts</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">Admin roles, granular rights</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Portals, one shared API</div></div>
+      <div class="stat"><div class="stat-num">NAV/BC</div><div class="stat-label">Live ERP integration</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">01</span><h2>Admin portal</h2></div>
+    <p class="section-note">Internal tool used by SACCO staff to manage members, tickets, access, and the deployment itself.</p>
+
+    <div class="shot-img">
+      <img src="../assets/blueeagle/admin-portal-users.png" alt="Blue Eagle admin portal — Portal Users list">
+      <div class="shot-caption">
+        <div><h5>Portal Users</h5><p>Activate, disable, or remove member portal accounts — 382 in view, 379 active.</p></div>
+        <span class="shot-route">adminportal.blueaglesacco.co.ke/dashboard</span>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/blueeagle/admin-tickets.png" alt="Blue Eagle admin portal — Tickets">
+        <div class="shot-caption">
+          <div><h5>Support Tickets</h5><p>Track and resolve member support requests, with scheduled attachment cleanup on closed tickets.</p></div>
+          <span class="shot-route">/tickets</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/blueeagle/admin-roles-rights.png" alt="Blue Eagle admin portal — Roles & Rights">
+        <div class="shot-caption">
+          <div><h5>Roles &amp; Rights</h5><p>Define what each role can do — individual named rights assigned per role, not blanket permissions.</p></div>
+          <span class="shot-route">/roles-rights</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/blueeagle/admin-manage-admins.png" alt="Blue Eagle admin portal — Manage Admins">
+        <div class="shot-caption">
+          <div><h5>Manage Admins</h5><p>Add admins, assign roles, and reset passwords.</p></div>
+          <span class="shot-route">/admins</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/blueeagle/admin-member-portal-management.png" alt="Blue Eagle admin portal — Member Portal Management">
+        <div class="shot-caption">
+          <div><h5>Member Portal Management</h5><p>Control which sidebar sections are visible, per section, down to individual member accounts.</p></div>
+          <span class="shot-route">/member-portal-management</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/blueeagle/admin-logs.png" alt="Blue Eagle admin portal — Logs">
+        <div class="shot-caption">
+          <div><h5>Logs</h5><p>Preview, download, or clean up server log files — console logs, admin login logs, statement generation logs — with age-based cleanup.</p></div>
+          <span class="shot-route">/logs</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/blueeagle/admin-restore-backup.png" alt="Blue Eagle admin portal — Restore Application Backup">
+        <div class="shot-caption">
+          <div><h5>Restore Application Backup</h5><p>Roll a Production or UAT subsite back to a previous deployment zip, straight from IIS site/subsite selection.</p></div>
+          <span class="shot-route">/rollback</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">02</span><h2>Member portal</h2></div>
+    <p class="section-note">The member-facing side — account position, statements, and loan eligibility, calculated live from the core ledger.</p>
+
+    <div class="shot-img">
+      <img src="../assets/blueeagle/member-dashboard.png" alt="Blue Eagle member portal — Dashboard">
+      <div class="shot-caption">
+        <div><h5>Member Dashboard</h5><p>Account position at a glance: shares, savings, loan balance, and loan limits with and without guarantors.</p></div>
+        <span class="shot-route">memberportal.blueaglesacco.co.ke/dashboard</span>
+      </div>
+    </div>
+
+    <div class="shot-img">
+      <img src="../assets/blueeagle/member-statements.png" alt="Blue Eagle member portal — Consolidated Statement">
+      <div class="shot-caption">
+        <div><h5>Consolidated Statement</h5><p>A 360° view of every fund and loan on the account, with full statement export to PDF.</p></div>
+        <span class="shot-route">/statements</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">03</span><h2>What it does</h2></div>
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feature-mark">01</div>
+        <div>
+          <h4>Named-rights access control</h4>
+          <p>Every admin action — activating a member, disabling a user, force-cleaning sessions, running
+             a ticket-attachment cleanup — maps to a named right (e.g. <code>ACTIVATE_USER</code>,
+             <code>CLEANUP_SESSIONS</code>) that's assigned to roles individually, so a role's
+             capabilities are always explicit rather than implied by its name.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">02</div>
+        <div>
+          <h4>Per-member, per-section portal visibility</h4>
+          <p>Sidebar sections on the member portal (Beneficiaries, Dashboard, Guarantors, Loans, Settings,
+             Statements) can each be scoped to all active members or a hand-picked list of account numbers —
+             built on a two-table schema separating the visibility rule from the selected-member list.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">03</div>
+        <div>
+          <h4>Live financial figures from the core ledger</h4>
+          <p>Loan outstanding balance, normal shares, share capital, holiday savings, and guarantee
+             free shares are all calculated directly from live transaction data in the Dynamics NAV
+             database rather than a cached total — so what a member sees always matches the source ledger.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">04</div>
+        <div>
+          <h4>Self-service deployment rollback</h4>
+          <p>Staff can roll a Production or UAT subsite back to any previous deployment package
+             directly from the admin portal — picking the IIS site, subsite, and dated backup zip —
+             without needing direct server access.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">05</div>
+        <div>
+          <h4>Operational housekeeping, built in</h4>
+          <p>Scheduled and on-demand cleanup for expired sessions, closed-ticket attachments, and
+             aging log files — each with its own retention window — keeps the system tidy without manual
+             server intervention.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">04</span><h2>Under the hood</h2></div>
+    <div class="ledger-row"><span class="ledger-label">Backend API</span><span class="ledger-leader"></span><span class="ledger-value">ASP.NET Core / .NET 8</span></div>
+    <div class="ledger-row"><span class="ledger-label">Data access</span><span class="ledger-leader"></span><span class="ledger-value">Dapper</span></div>
+    <div class="ledger-row"><span class="ledger-label">Database</span><span class="ledger-leader"></span><span class="ledger-value">SQL Server 2016 (Dynamics NAV / Business Central)</span></div>
+    <div class="ledger-row"><span class="ledger-label">Admin frontend</span><span class="ledger-leader"></span><span class="ledger-value">React 19 · Vite · Tailwind CSS v4</span></div>
+    <div class="ledger-row"><span class="ledger-label">Member frontend</span><span class="ledger-leader"></span><span class="ledger-value">React 19 · Vite · Tailwind CSS v4</span></div>
+    <div class="ledger-row"><span class="ledger-label">Auth</span><span class="ledger-leader"></span><span class="ledger-value">JWT bearer, separate admin scheme, BCrypt hashing</span></div>
+    <div class="ledger-row"><span class="ledger-label">Email</span><span class="ledger-leader"></span><span class="ledger-value">MailKit via Zoho SMTP</span></div>
+    <div class="ledger-row"><span class="ledger-label">Infrastructure</span><span class="ledger-leader"></span><span class="ledger-value">IIS on Windows Server · Azure DevOps CI/CD</span></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%;flex-wrap:wrap;gap:16px">
+    <a href="../index.html" class="nav-back">← Back to all work</a>
+    <a href="primcap.html" class="footer-mono">Next: Primcap Staff Portal →</a>
+  </div>
+</footer>
+
+</body>
+</html>
