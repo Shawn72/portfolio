@@ -10,7 +10,6 @@
 
 <nav class="nav">
   <div class="wrap">
-    <a href="../index.html" class="nav-mark">Shawn Mbuvi <span>/ Software Engineer</span></a>
     <a href="../assets/cv/Shawn_Mbuvi_CV.pdf" target="_blank" rel="noopener" class="nav-back" style="margin-right:20px">Résumé (PDF)</a><a href="../index.html" class="nav-back">← All work</a>
   </div>
 </nav>
@@ -18,54 +17,46 @@
 <header class="cs-hero">
   <div class="wrap">
     <span class="status-badge">Internal · In active use</span>
-    <h1>Primcap — internal staff portal</h1>
-    <p>An internal operations portal used by staff day-to-day, with a role- and widget-level visibility
-       system so each staff member's sidebar and dashboard show only what their line of work needs.</p>
+    <h1>Primcap — microfinance staff portal</h1>
+    <p>An internal operations portal for a multi-branch microfinance lender — leads, loans, collections,
+       and branch performance in one dashboard, with a role and menu-visibility system precise enough
+       to control individual dashboard widgets per user.</p>
 
     <div class="stat-strip">
-      <div class="stat"><div class="stat-num">.NET</div><div class="stat-label">API backend</div></div>
-      <div class="stat"><div class="stat-num">React</div><div class="stat-label">Vite frontend</div></div>
-      <div class="stat"><div class="stat-num">2-tier</div><div class="stat-label">Menu + widget visibility</div></div>
+      <div class="stat"><div class="stat-num">5</div><div class="stat-label">Branches tracked live</div></div>
+      <div class="stat"><div class="stat-num">9</div><div class="stat-label">Roles · 61 rights</div></div>
+      <div class="stat"><div class="stat-num">446</div><div class="stat-label">Active customers</div></div>
+      <div class="stat"><div class="stat-num">Widget</div><div class="stat-label">-level visibility control</div></div>
     </div>
   </div>
 </header>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">01</span><h2>Overview</h2></div>
-    <div class="placeholder-note">Placeholder — swap in your real screenshots and stat numbers once you send them over.</div>
-    <div class="shot"><span class="shot-label">Staff dashboard — screenshot placeholder</span></div>
-  </div>
-</section>
+    <div class="section-head"><span class="section-num">01</span><h2>Dashboard &amp; operations</h2></div>
+    <p class="section-note">What staff see first — same-day figures rolled up by branch, and the day-to-day tools built around them.</p>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-head"><span class="section-num">02</span><h2>What it does</h2></div>
-    <div class="feature-list">
-      <div class="feature">
-        <div class="feature-mark">01</div>
-        <div>
-          <h4>Widget-level dashboard control</h4>
-          <p>Visibility control goes beyond hiding whole sidebar sections — individual stat cards and
-             charts on the staff home dashboard can be configured on or off per user, so a dashboard
-             genuinely fits the role viewing it.</p>
+    <div class="shot-img">
+      <img src="../assets/primcap/dashboard.png" alt="Primcap dashboard — branch performance">
+      <div class="shot-caption">
+        <div><h5>Dashboard</h5><p>Today's leads, loans disbursed, this month's customers, and today's collection at a glance, with collection rate and active-customer charts broken out by branch (Kilifi, Kitengela, Mtwapa, Nyali, Ukunda).</p></div>
+        <span class="shot-route">/dashboard</span>
+      </div>
+    </div>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/primcap/support-tickets.png" alt="Primcap support tickets">
+        <div class="shot-caption">
+          <div><h5>Support Tickets</h5><p>Internal ticketing with priority, status, assignment, and activity tracking, plus scheduled attachment cleanup on old closed tickets.</p></div>
+          <span class="shot-route">/tickets</span>
         </div>
       </div>
-      <div class="feature">
-        <div class="feature-mark">02</div>
-        <div>
-          <h4>Fail-closed menu registration</h4>
-          <p>Every new top-level sidebar section is deliberately hidden from everyone until explicitly
-             seeded into the visibility table — new features can't accidentally leak to staff who
-             shouldn't see them yet.</p>
-        </div>
-      </div>
-      <div class="feature">
-        <div class="feature-mark">03</div>
-        <div>
-          <h4>Line-based access model</h4>
-          <p>Staff visibility is scoped by line number rather than a flat role field, matching how the
-             organization actually assigns responsibilities.</p>
+      <div class="shot-img">
+        <img src="../assets/primcap/customer-search.png" alt="Primcap customer search">
+        <div class="shot-caption">
+          <div><h5>Customer Search</h5><p>Cross-branch customer lookup with loan officer, collection officer, and business detail columns, exportable on demand.</p></div>
+          <span class="shot-route">/customer-search</span>
         </div>
       </div>
     </div>
@@ -74,10 +65,124 @@
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head"><span class="section-num">03</span><h2>Under the hood</h2></div>
+    <div class="section-head"><span class="section-num">02</span><h2>Roles, rights &amp; branch access</h2></div>
+    <p class="section-note">Fine-grained enough that access can be scoped down to a single branch, or even overridden per branch for one person.</p>
+
+    <div class="shot-img">
+      <img src="../assets/primcap/roles-rights.png" alt="Primcap roles and rights catalog">
+      <div class="shot-caption">
+        <div><h5>Roles &amp; Rights</h5><p>Nine roles — from read-only Team Lead to full-access Super Admin — built from a catalog of 61 individually assignable rights (e.g. <code>collections.record_payment</code>, <code>customers.view_all_readonly</code>).</p></div>
+        <span class="shot-route">/roles</span>
+      </div>
+    </div>
+
+    <div class="shot-img">
+      <img src="../assets/primcap/branch-access.png" alt="Primcap per-branch role override">
+      <div class="shot-caption">
+        <div><h5>Per-branch role override</h5><p>Beyond a user's home branch, admins can grant access to additional branches and optionally assign a <em>different</em> role at each one — e.g. Loan Officer everywhere, but Branch Manager at one specific branch.</p></div>
+        <span class="shot-route">/roles → Users → Branch access</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">03</span><h2>Portal menu management</h2></div>
+    <p class="section-note">The visibility system extends past sidebar sections down to individual dashboard widgets.</p>
+
+    <div class="shot-img">
+      <img src="../assets/primcap/portal-menu-management.png" alt="Primcap portal menu management — per-widget visibility">
+      <div class="shot-caption">
+        <div><h5>Portal Menu Management</h5><p>Every sidebar section — and every individual dashboard stat card and chart — has its own visibility toggle and an explicit list of which active users can see it, not just a role check.</p></div>
+        <span class="shot-route">/portal-menu-management</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">04</span><h2>System administration</h2></div>
+    <p class="section-note">Superadmin-only tooling for keeping the server tidy and recoverable, without needing direct server access.</p>
+
+    <div class="shot-pair">
+      <div class="shot-img">
+        <img src="../assets/primcap/system-logs.png" alt="Primcap system — log cleanup and log files">
+        <div class="shot-caption">
+          <div><h5>System — Logs</h5><p>Age-based log cleanup with a clear record of the last run, plus per-file preview, download, and delete — flagged as a destructive, Superadmin-only tab.</p></div>
+          <span class="shot-route">/roles → System</span>
+        </div>
+      </div>
+      <div class="shot-img">
+        <img src="../assets/primcap/backups.png" alt="Primcap backups — stored procedures and deployment zips">
+        <div class="shot-caption">
+          <div><h5>Backups</h5><p>On-demand stored-procedure snapshots to a server-configured folder, plus automatic full-subsite deployment zips captured on every UAT and Production deploy.</p></div>
+          <span class="shot-route">/roles → Backups</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">05</span><h2>What it does</h2></div>
+    <div class="feature-list">
+      <div class="feature">
+        <div class="feature-mark">01</div>
+        <div>
+          <h4>Widget-level dashboard control</h4>
+          <p>Visibility doesn't stop at whole sidebar sections — individual stat cards and charts on the
+             Home dashboard (Today's Leads, Today's Collection, the Collection Rate by Branch chart, and
+             so on) are each independently configurable, down to an explicit list of which users can see them.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">02</div>
+        <div>
+          <h4>Rights catalog, not role guesswork</h4>
+          <p>61 individually named rights compose 9 roles, so "what can a Branch Manager actually do" is
+             always answerable by looking at an explicit list rather than inferring it from the role name.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">03</div>
+        <div>
+          <h4>Per-branch role overrides</h4>
+          <p>A user's access isn't one role applied everywhere — each additional branch they're granted
+             can carry its own role, so someone can be a Loan Officer company-wide but a Branch Manager
+             at one specific branch where they've taken on more responsibility.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">04</div>
+        <div>
+          <h4>Self-service recovery tooling</h4>
+          <p>Stored-procedure snapshots and full-subsite deployment backups (captured automatically per
+             UAT/Production deploy) are downloadable straight from the portal, so recovering from a bad
+             change doesn't require direct server or database access.</p>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature-mark">05</div>
+        <div>
+          <h4>Branch performance as a first-class view</h4>
+          <p>Collection rate and active-customer figures are broken out per branch by default, not just
+             totaled company-wide — reflecting how the business actually reviews performance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><span class="section-num">06</span><h2>Under the hood</h2></div>
     <div class="ledger-row"><span class="ledger-label">Backend API</span><span class="ledger-leader"></span><span class="ledger-value">ASP.NET Core (.NET)</span></div>
     <div class="ledger-row"><span class="ledger-label">Database</span><span class="ledger-leader"></span><span class="ledger-value">SQL Server</span></div>
     <div class="ledger-row"><span class="ledger-label">Frontend</span><span class="ledger-leader"></span><span class="ledger-value">React · Vite</span></div>
+    <div class="ledger-row"><span class="ledger-label">Backups</span><span class="ledger-leader"></span><span class="ledger-value">Stored-procedure SQL snapshots + per-deploy subsite zips (UAT/Production)</span></div>
     <div class="ledger-row"><span class="ledger-label">Infrastructure</span><span class="ledger-leader"></span><span class="ledger-value">IIS on Windows Server · Azure DevOps CI/CD</span></div>
   </div>
 </section>
