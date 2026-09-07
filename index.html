@@ -6,6 +6,17 @@
 <title>Shawn Mbuvi — Software Engineer</title>
 <meta name="description" content="Shawn Mbuvi Ngutu — Software Engineer. .NET, React, and MSSQL systems for financial and enterprise platforms across Kenya.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:48px;align-items:center}
+  .hero-copy{min-width:0}
+  .hero-profile-wrap{display:flex;justify-content:flex-end}
+  .hero-profile{width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center 30%;border:2px solid var(--gold-soft);box-shadow:0 18px 45px rgba(0,0,0,.28)}
+  @media (max-width:720px){
+    .hero-grid{grid-template-columns:1fr;gap:28px}
+    .hero-profile-wrap{order:-1;justify-content:flex-start}
+    .hero-profile{width:150px;height:150px}
+  }
+</style>
 </head>
 <body>
 
@@ -25,21 +36,28 @@
 
 <header class="hero">
   <div class="wrap">
-    <div class="eyebrow">Open to opportunities · Nairobi, Kenya</div>
-    <h1>Software engineer building the <em>systems that run</em> financial and enterprise operations.</h1>
-    <p class="hero-lede">
-      I build backend APIs and admin platforms end to end — from .NET Core services and MSSQL schemas
-      to the React interfaces staff and members actually use. Most of my work sits behind the login screen:
-      savings ledgers, role-based access, dashboards, and the integrations that keep them talking to
-      Microsoft Dynamics NAV / Business Central.
-    </p>
-    <div class="hero-contacts">
-      <a href="mailto:shawnmbuvi@gmail.com">✉ shawnmbuvi@gmail.com</a>
-      <a href="tel:+254731628560">📞 +254 731 628 560</a>
-      <a href="https://github.com/Shawn72" target="_blank" rel="noopener">⌥ github.com/Shawn72</a>
-      <a href="https://www.linkedin.com/in/shawn-andre-mbuvi-02062682/" target="_blank" rel="noopener">in LinkedIn</a>
-      <a href="assets/cv/Shawn_Mbuvi_CV.pdf" target="_blank" rel="noopener">📄 Résumé (PDF)</a>
-      <a href="assets/cv/Shawn_Mbuvi_CV.docx" target="_blank" rel="noopener">📝 Résumé (Word)</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Open to opportunities · Nairobi, Kenya</div>
+        <h1>Software engineer building the <em>systems that run</em> financial and enterprise operations.</h1>
+        <p class="hero-lede">
+          I build backend APIs and admin platforms end to end — from .NET Core services and MSSQL schemas
+          to the React interfaces staff and members actually use. Most of my work sits behind the login screen:
+          savings ledgers, role-based access, dashboards, and the integrations that keep them talking to
+          Microsoft Dynamics NAV / Business Central.
+        </p>
+        <div class="hero-contacts">
+          <a href="mailto:shawnmbuvi@gmail.com">✉ shawnmbuvi@gmail.com</a>
+          <a href="tel:+254731628560">📞 +254 731 628 560</a>
+          <a href="https://github.com/Shawn72" target="_blank" rel="noopener">⌥ github.com/Shawn72</a>
+          <a href="https://www.linkedin.com/in/shawn-andre-mbuvi-02062682/" target="_blank" rel="noopener">in LinkedIn</a>
+          <a href="assets/cv/Shawn_Mbuvi_CV.pdf" target="_blank" rel="noopener">📄 Résumé (PDF)</a>
+          <a href="assets/cv/Shawn_Mbuvi_CV.docx" target="_blank" rel="noopener">📝 Résumé (Word)</a>
+        </div>
+      </div>
+      <div class="hero-profile-wrap">
+        <img class="hero-profile" src="assets/images/shawn-profile.svg" alt="Shawn Mbuvi profile photo">
+      </div>
     </div>
   </div>
 </header>
