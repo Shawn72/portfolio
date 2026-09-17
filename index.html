@@ -11,10 +11,29 @@
   .hero-copy{min-width:0}
   .hero-profile-wrap{display:flex;justify-content:flex-end}
   .hero-profile{width:220px;height:220px;border-radius:50%;object-fit:cover;object-position:center 30%;border:2px solid var(--gold-soft);box-shadow:0 18px 45px rgba(0,0,0,.28)}
+  .books-head{display:flex;justify-content:space-between;align-items:flex-end;gap:28px;margin-bottom:30px}
+  .books-head h2{font-family:var(--display);font-weight:500;font-size:30px;margin-bottom:6px}
+  .books-head p{font-size:14.5px;color:var(--ink-dim);max-width:620px}
+  .author-site-link{font-family:var(--mono);font-size:12.5px;color:var(--gold);white-space:nowrap;border:1px solid var(--gold-soft);padding:10px 14px;border-radius:4px;transition:background .18s ease}
+  .author-site-link:hover{background:rgba(212,165,55,.08)}
+  .books-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+  .book-card{background:linear-gradient(155deg,var(--panel-raised) 0%,var(--panel) 100%);border:1px solid var(--rule);border-radius:8px;padding:30px;display:flex;flex-direction:column;min-height:100%}
+  .book-card.available{border-color:var(--gold-soft)}
+  .book-status{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+  .book-card.coming .book-status{color:var(--green)}
+  .book-card h3{font-family:var(--display);font-size:27px;font-weight:500;line-height:1.15;margin-bottom:8px}
+  .book-series{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-bottom:20px}
+  .book-card p{font-size:14.5px;color:var(--ink-dim);margin-bottom:20px}
+  .book-card .book-tags{margin-top:auto;margin-bottom:22px}
+  .book-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  .book-secondary{display:inline-flex;align-items:center;font-family:var(--mono);font-size:12.5px;color:var(--ink-dim);padding:11px 0}
+  .book-secondary:hover{color:var(--gold)}
   @media (max-width:720px){
     .hero-grid{grid-template-columns:1fr;gap:28px}
     .hero-profile-wrap{order:-1;justify-content:flex-start}
     .hero-profile{width:150px;height:150px}
+    .books-head{align-items:flex-start;flex-direction:column}
+    .books-grid{grid-template-columns:1fr}
   }
 </style>
 </head>
@@ -25,6 +44,7 @@
     <a href="index.html" class="nav-mark">Shawn Mbuvi <span>/ Software Engineer</span></a>
     <div class="nav-links">
       <a href="#work">Work</a>
+      <a href="#books">Books</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="assets/cv/Shawn_Mbuvi_CV.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
@@ -62,25 +82,50 @@
   </div>
 </header>
 
-<section class="book-feature">
+<section class="book-feature" id="books">
   <div class="wrap">
-    <div class="book-panel">
-      <div class="book-eyebrow">Now live on Amazon</div>
-      <h2 class="book-title">The Three Orders of Salt</h2>
-      <p class="book-subtitle">My debut novel — urban fantasy / supernatural thriller, Kindle &amp; paperback</p>
-      <div class="book-body">
-        <p>Some engineering habits don't stay at work. Writing this book, I found myself doing the same thing I do at my day job: building a system, defining its rules, then making sure every consequence in the story actually follows from them. The result is a magic system with a real cost — truth that can't be spoken freely, and a debt that outlives the person who made it — layered on top of Swahili coastal folklore and a Kenyan coastline I know well.</p>
+    <div class="books-head">
+      <div>
+        <div class="book-eyebrow">Books &amp; Writing</div>
+        <h2>Mombasa Urban Fantasy Series</h2>
+        <p>Urban fantasy and supernatural thrillers rooted in Mombasa, the Swahili Coast, folklore, old bargains, and the consequences that follow them.</p>
       </div>
-      <div class="book-quote">
-        Omar Mbwana just wants to keep his salvage yard running. Then a rusted compass cuts his palm, and he's bound to a spirit that won't let him lie — one gift, one curse, and a truth that might get him killed before it saves him.
-      </div>
-      <div class="book-tags">
-        <span class="chip">Urban Fantasy</span>
-        <span class="chip">Supernatural Thriller</span>
-        <span class="chip">Swahili Coastal Folklore</span>
-        <span class="chip">Kenya</span>
-      </div>
-      <a href="https://a.co/d/0grRP7ul" target="_blank" rel="noopener" class="book-cta">Get it on Kindle &amp; Paperback →</a>
+      <a href="https://urbanfantasy.ninjaxco.com/" target="_blank" rel="noopener" class="author-site-link">Visit author site →</a>
+    </div>
+
+    <div class="books-grid">
+      <article class="book-card available">
+        <div class="book-status">Available now</div>
+        <h3>The Three Orders of Salt</h3>
+        <div class="book-series">Mombasa Urban Fantasy · Book 1</div>
+        <p>Omar Mbwana just wants to keep his salvage yard running. Then a rusted compass cuts his palm, binding him to a spirit that will not let him lie — one gift, one curse, and a truth that may get him killed before it saves him.</p>
+        <div class="book-tags">
+          <span class="chip">Urban Fantasy</span>
+          <span class="chip">Supernatural Thriller</span>
+          <span class="chip">Swahili Coastal Folklore</span>
+          <span class="chip">Kenya</span>
+        </div>
+        <div class="book-actions">
+          <a href="https://www.amazon.com/dp/B0HH9MNGP5" target="_blank" rel="noopener" class="book-cta">Get it on Amazon →</a>
+          <a href="https://urbanfantasy.ninjaxco.com/" target="_blank" rel="noopener" class="book-secondary">Explore the series →</a>
+        </div>
+      </article>
+
+      <article class="book-card coming">
+        <div class="book-status">Coming soon</div>
+        <h3>Creatures of the Night</h3>
+        <div class="book-series">Mombasa Urban Fantasy · Book 2</div>
+        <p>Three months after <em>The Three Orders of Salt</em>, older darknesses surface around Mombasa. Some are bound by bargains. Others were never summoned at all — and the stories people grew up hearing begin to look more like warnings.</p>
+        <div class="book-tags">
+          <span class="chip">Urban Fantasy</span>
+          <span class="chip">Supernatural Thriller</span>
+          <span class="chip">Black Order</span>
+          <span class="chip">Mombasa</span>
+        </div>
+        <div class="book-actions">
+          <a href="https://urbanfantasy.ninjaxco.com/" target="_blank" rel="noopener" class="book-cta">Preview the series →</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -92,102 +137,31 @@
       <h2>Selected work</h2>
     </div>
     <p class="section-note">Production and internal platforms built and maintained end to end. Repos are private — case studies below cover architecture, screens, and outcomes.</p>
-
     <div class="projects-grid">
-
       <a href="projects/blueeagle.html" class="pcard">
-        <div>
-          <div class="pcard-tag">Fintech · SACCO Platform</div>
-          <h3>Blue Eagle SACCO</h3>
-          <p>Admin and member-facing portals for a savings & credit cooperative, backed by a .NET 8 API
-             integrated with Microsoft Dynamics NAV / Business Central.</p>
-          <div class="pcard-stack">
-            <span class="chip">ASP.NET Core 8</span>
-            <span class="chip">React 19</span>
-            <span class="chip">SQL Server</span>
-            <span class="chip">Dapper</span>
-            <span class="chip">Dynamics NAV</span>
-          </div>
-        </div>
-        <div class="pcard-arrow">→</div>
+        <div><div class="pcard-tag">Fintech · SACCO Platform</div><h3>Blue Eagle SACCO</h3><p>Admin and member-facing portals for a savings &amp; credit cooperative, backed by a .NET 8 API integrated with Microsoft Dynamics NAV / Business Central.</p><div class="pcard-stack"><span class="chip">ASP.NET Core 8</span><span class="chip">React 19</span><span class="chip">SQL Server</span><span class="chip">Dapper</span><span class="chip">Dynamics NAV</span></div></div><div class="pcard-arrow">→</div>
       </a>
-
       <a href="projects/primcap.html" class="pcard">
-        <div>
-          <div class="pcard-tag">Internal Platform · Staff Portal</div>
-          <h3>Primcap Staff Portal</h3>
-          <p>Multi-branch microfinance operations portal — leads, loans, collections, and branch
-             performance, with a rights catalog and per-widget visibility system precise enough to
-             control individual dashboard cards per user.</p>
-          <div class="pcard-stack">
-            <span class="chip">ASP.NET Core</span>
-            <span class="chip">React / Vite</span>
-            <span class="chip">SQL Server</span>
-          </div>
-        </div>
-        <div class="pcard-arrow">→</div>
+        <div><div class="pcard-tag">Internal Platform · Staff Portal</div><h3>Primcap Staff Portal</h3><p>Multi-branch microfinance operations portal — leads, loans, collections, and branch performance, with a rights catalog and per-widget visibility system precise enough to control individual dashboard cards per user.</p><div class="pcard-stack"><span class="chip">ASP.NET Core</span><span class="chip">React / Vite</span><span class="chip">SQL Server</span></div></div><div class="pcard-arrow">→</div>
       </a>
-
       <a href="projects/ninjax.html" class="pcard">
-        <div>
-          <div class="pcard-tag">SaaS · Multi-tenant Licensing</div>
-          <h3>Ninjax Inventory &amp; POS</h3>
-          <p>A subscription-licensed inventory &amp; POS platform built as three connected apps: the
-             business's own admin/till, a client subscription portal, and Ninjax's internal console for
-             licensing every client on the platform.</p>
-          <div class="pcard-stack">
-            <span class="chip">React</span>
-            <span class="chip">REST API</span>
-            <span class="chip">MySQL</span>
-            <span class="chip">M-Pesa</span>
-          </div>
-        </div>
-        <div class="pcard-arrow">→</div>
+        <div><div class="pcard-tag">SaaS · Multi-tenant Licensing</div><h3>Ninjax Inventory &amp; POS</h3><p>A subscription-licensed inventory &amp; POS platform built as three connected apps: the business's own admin/till, a client subscription portal, and Ninjax's internal console for licensing every client on the platform.</p><div class="pcard-stack"><span class="chip">React</span><span class="chip">REST API</span><span class="chip">MySQL</span><span class="chip">M-Pesa</span></div></div><div class="pcard-arrow">→</div>
       </a>
-
     </div>
   </div>
 </section>
 
 <section class="section" id="skills">
   <div class="wrap">
-    <div class="section-head">
-      <span class="section-num">02</span>
-      <h2>Technical skills</h2>
-    </div>
-
+    <div class="section-head"><span class="section-num">02</span><h2>Technical skills</h2></div>
     <div class="skills-grid">
       <div>
-        <div class="skill-group">
-          <h4>.NET &amp; Backend</h4>
-          <div class="ledger-row"><span class="ledger-label">.NET Framework / Core / 6 / 7 / 8</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">ASP.NET MVC · EF · xUnit · NUnit</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">C# · Node.js · Express.js</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">PHP · Java · Spring Boot</span><span class="ledger-leader"></span></div>
-        </div>
-        <div class="skill-group" style="margin-top:26px">
-          <h4>Frontend &amp; Mobile</h4>
-          <div class="ledger-row"><span class="ledger-label">React.js · Angular</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">JavaScript (ES6+) · HTML5 · CSS</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">Bootstrap · jQuery</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">React Native · Android</span><span class="ledger-leader"></span></div>
-        </div>
+        <div class="skill-group"><h4>.NET &amp; Backend</h4><div class="ledger-row"><span class="ledger-label">.NET Framework / Core / 6 / 7 / 8</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">ASP.NET MVC · EF · xUnit · NUnit</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">C# · Node.js · Express.js</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">PHP · Java · Spring Boot</span><span class="ledger-leader"></span></div></div>
+        <div class="skill-group" style="margin-top:26px"><h4>Frontend &amp; Mobile</h4><div class="ledger-row"><span class="ledger-label">React.js · Angular</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">JavaScript (ES6+) · HTML5 · CSS</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">Bootstrap · jQuery</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">React Native · Android</span><span class="ledger-leader"></span></div></div>
       </div>
       <div>
-        <div class="skill-group">
-          <h4>Databases &amp; APIs</h4>
-          <div class="ledger-row"><span class="ledger-label">MSSQL · MySQL · PostgreSQL</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">Redis · MongoDB</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">REST APIs · GraphQL</span><span class="ledger-leader"></span></div>
-        </div>
-        <div class="skill-group" style="margin-top:26px">
-          <h4>Tools &amp; Infrastructure</h4>
-          <div class="ledger-row"><span class="ledger-label">Docker · Postman · Swagger</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">Azure DevOps · Jenkins</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">GitHub · GitLab</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">Nginx · Apache · IIS</span><span class="ledger-leader"></span></div>
-          <div class="ledger-row"><span class="ledger-label">Socket.io · Phaser 3 · Dynamics NAV/D365</span><span class="ledger-leader"></span></div>
-        </div>
+        <div class="skill-group"><h4>Databases &amp; APIs</h4><div class="ledger-row"><span class="ledger-label">MSSQL · MySQL · PostgreSQL</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">Redis · MongoDB</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">REST APIs · GraphQL</span><span class="ledger-leader"></span></div></div>
+        <div class="skill-group" style="margin-top:26px"><h4>Tools &amp; Infrastructure</h4><div class="ledger-row"><span class="ledger-label">Docker · Postman · Swagger</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">Azure DevOps · Jenkins</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">GitHub · GitLab</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">Nginx · Apache · IIS</span><span class="ledger-leader"></span></div><div class="ledger-row"><span class="ledger-label">Socket.io · Phaser 3 · Dynamics NAV/D365</span><span class="ledger-leader"></span></div></div>
       </div>
     </div>
   </div>
@@ -195,129 +169,29 @@
 
 <section class="section" id="experience">
   <div class="wrap">
-    <div class="section-head">
-      <span class="section-num">03</span>
-      <h2>Where I've worked</h2>
-    </div>
-
+    <div class="section-head"><span class="section-num">03</span><h2>Where I've worked</h2></div>
     <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-date">Nov 2024 — Present</div>
-        <div>
-          <div class="tl-role">Software Engineer</div>
-          <div class="tl-org">Craft Silicon Ltd</div>
-          <p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Backend engineer focused on building and maintaining enterprise integration solutions for financial institutions across Africa and Asia.</p>
-          <ul>
-            <li><strong style="color:var(--ink)">Backend Development &amp; APIs:</strong> RESTful APIs and background job processors in .NET 8 and .NET Framework (4.7/4.8), supporting payment processing, regulatory reporting, and loan management workflows for banks, MFIs, and payment processors</li>
-            <li><strong style="color:var(--ink)">Systems Integration:</strong> Core banking systems, payment gateways (FlyGate/Ethiopian Airlines, Co-op Bank, EthSwitch IPS), telecom billing platforms (Ethiotelecom/Huawei CBS) — SOAP, REST, and ISO 8583-adjacent messaging</li>
-            <li><strong style="color:var(--ink)">Windows Services &amp; Job Processing:</strong> Quartz.NET background processors for PNR retry logic, CBK regulatory report submission, BNPL callback processing, and dead-letter reprocessing</li>
-            <li><strong style="color:var(--ink)">Regulatory &amp; Compliance Engineering:</strong> Data pipelines and SQL Server stored procedures for CBK regulatory reporting — sync jobs, retry mechanisms, compliance email notifications</li>
-            <li><strong style="color:var(--ink)">DevOps &amp; Deployment:</strong> Multi-environment CI/CD on Azure DevOps — build configs, XDT transforms (SlowCheetah), publish profiles across UAT and Production</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Apr 2023 — Nov 2024</div>
-        <div>
-          <div class="tl-role">Software Developer Consultant</div>
-          <div class="tl-org">Freelance</div>
-          <p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Full-stack consulting across healthcare, retail, and enterprise clients — led end-to-end delivery from requirements through deployment and maintenance.</p>
-          <ul>
-            <li><strong style="color:var(--ink)">Technical Leadership:</strong> Led design and development of enterprise systems, guiding teams through architecture decisions, code reviews, version control workflows, and production deployments</li>
-            <li><strong style="color:var(--ink)">Full-Stack Development:</strong> Delivered custom web applications and integration solutions using React.js, Node.js, .NET, PHP, and various database technologies</li>
-            <li><strong style="color:var(--ink)">Systems Integration:</strong> Architected integrations between enterprise systems, third-party APIs, and cloud platforms to streamline business operations</li>
-          </ul>
-          <p style="font-size:13px;color:var(--ink-dim);margin-top:10px;margin-bottom:4px"><strong style="color:var(--ink)">Notable projects:</strong></p>
-          <ul>
-            <li>Document Management System — integrated SharePoint with ONA and KoboToolbox for data collection and workflow management</li>
-            <li>Patient–Doctor Experience Platform — custom healthcare management system for patient engagement and clinical workflows</li>
-            <li>E-Commerce &amp; Inventory System — end-to-end electronics retail solution: catalog, cart, payments, real-time inventory</li>
-            <li>D365 Integration Portals — self-service web portals with automated Microsoft Dynamics 365 data sync</li>
-            <li>Hospital Management System — patient records, receipt/invoice generation, and appointment scheduling</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Apr 2022 — Feb 2023</div>
-        <div>
-          <div class="tl-role">Software Developer</div>
-          <div class="tl-org">Anvil Shield Group</div>
-          <p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Contributed to enterprise payment systems, ensuring robust functionality, security, and scalability, while mentoring junior developers.</p>
-          <ul>
-            <li><strong style="color:var(--ink)">Payment Systems Development:</strong> Designed and developed critical API endpoints for payment processing, ensuring secure transactions, data integrity, and compliance with financial service standards</li>
-            <li><strong style="color:var(--ink)">Code Quality &amp; Review:</strong> Conducted source code reviews, managed version control workflows, and enforced coding standards across the codebase</li>
-            <li><strong style="color:var(--ink)">Feature Development:</strong> Led design and implementation of new features while optimizing existing components for performance and user experience</li>
-            <li><strong style="color:var(--ink)">Technical Mentorship:</strong> Mentored junior developers on best practices, design patterns, and development methodology</li>
-            <li><strong style="color:var(--ink)">Quality Assurance:</strong> Participated in UAT to validate functionality, identify edge cases, and ensure production-ready code</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Apr 2021 — Apr 2022</div>
-        <div>
-          <div class="tl-role">Systems Developer</div>
-          <div class="tl-org">Smart Applications International Group</div>
-          <p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Developed enterprise web solutions and integration systems for smart card management platforms.</p>
-          <ul>
-            <li><strong style="color:var(--ink)">Web Portal Development:</strong> Designed, developed, and deployed user-facing portals that streamlined smart card management operations and improved operational efficiency</li>
-            <li><strong style="color:var(--ink)">Integration Architecture:</strong> Built integration endpoints and APIs for reliable data exchange between smart card systems and external platforms</li>
-            <li><strong style="color:var(--ink)">Technical Mentorship:</strong> Guided junior developers through code reviews and technical challenges</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">Oct 2018 — Feb 2021</div>
-        <div>
-          <div class="tl-role">Web Applications Developer</div>
-          <div class="tl-org">Dynasoft Business Solutions Ltd</div>
-          <p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Developed integrated web solutions connecting Microsoft Dynamics NAV ERP with custom portals and third-party services.</p>
-          <ul>
-            <li><strong style="color:var(--ink)">ERP Portal Development:</strong> Built web portals enabling seamless access to Board Management modules within Microsoft Dynamics NAV</li>
-            <li><strong style="color:var(--ink)">Systems Integration:</strong> Integrated Dynamics NAV ERP with SMS gateway providers for automated bulk messaging</li>
-            <li><strong style="color:var(--ink)">Feature Development &amp; Maintenance:</strong> Delivered new functionality against business requirements, with ongoing support, bug fixes, and optimizations</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-date">May 2017 — Oct 2018</div>
-        <div>
-          <div class="tl-role">Systems Developer</div>
-          <div class="tl-org">Surestep Systems and Solutions Ltd</div>
-          <p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Developed internal web solutions integrated with Microsoft Dynamics NAV ERP to digitize HR processes and reduce manual administrative overhead.</p>
-          <ul>
-            <li><strong style="color:var(--ink)">Employee Self-Service Portal:</strong> Automated time and attendance tracking, replacing manual login processes and improving workforce-management accuracy</li>
-            <li><strong style="color:var(--ink)">ERP Integration:</strong> Built the portal's integration with Dynamics NAV, giving employees remote access to leave applications, P9 tax forms, and payslips</li>
-            <li><strong style="color:var(--ink)">Digital Transformation:</strong> Digitized manual HR processes, enabling anytime-anywhere access to employee information</li>
-          </ul>
-        </div>
-      </div>
+      <div class="tl-item"><div class="tl-date">Nov 2024 — Present</div><div><div class="tl-role">Software Engineer</div><div class="tl-org">Craft Silicon Ltd</div><p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Backend engineer focused on building and maintaining enterprise integration solutions for financial institutions across Africa and Asia.</p><ul><li><strong style="color:var(--ink)">Backend Development &amp; APIs:</strong> RESTful APIs and background job processors in .NET 8 and .NET Framework (4.7/4.8), supporting payment processing, regulatory reporting, and loan management workflows for banks, MFIs, and payment processors</li><li><strong style="color:var(--ink)">Systems Integration:</strong> Core banking systems, payment gateways (FlyGate/Ethiopian Airlines, Co-op Bank, EthSwitch IPS), telecom billing platforms (Ethiotelecom/Huawei CBS) — SOAP, REST, and ISO 8583-adjacent messaging</li><li><strong style="color:var(--ink)">Windows Services &amp; Job Processing:</strong> Quartz.NET background processors for PNR retry logic, CBK regulatory report submission, BNPL callback processing, and dead-letter reprocessing</li><li><strong style="color:var(--ink)">Regulatory &amp; Compliance Engineering:</strong> Data pipelines and SQL Server stored procedures for CBK regulatory reporting — sync jobs, retry mechanisms, compliance email notifications</li><li><strong style="color:var(--ink)">DevOps &amp; Deployment:</strong> Multi-environment CI/CD on Azure DevOps — build configs, XDT transforms (SlowCheetah), publish profiles across UAT and Production</li></ul></div></div>
+      <div class="tl-item"><div class="tl-date">Apr 2023 — Nov 2024</div><div><div class="tl-role">Software Developer Consultant</div><div class="tl-org">Freelance</div><p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Full-stack consulting across healthcare, retail, and enterprise clients — led end-to-end delivery from requirements through deployment and maintenance.</p><ul><li><strong style="color:var(--ink)">Technical Leadership:</strong> Led design and development of enterprise systems, guiding teams through architecture decisions, code reviews, version control workflows, and production deployments</li><li><strong style="color:var(--ink)">Full-Stack Development:</strong> Delivered custom web applications and integration solutions using React.js, Node.js, .NET, PHP, and various database technologies</li><li><strong style="color:var(--ink)">Systems Integration:</strong> Architected integrations between enterprise systems, third-party APIs, and cloud platforms to streamline business operations</li></ul><p style="font-size:13px;color:var(--ink-dim);margin-top:10px;margin-bottom:4px"><strong style="color:var(--ink)">Notable projects:</strong></p><ul><li>Document Management System — integrated SharePoint with ONA and KoboToolbox for data collection and workflow management</li><li>Patient–Doctor Experience Platform — custom healthcare management system for patient engagement and clinical workflows</li><li>E-Commerce &amp; Inventory System — end-to-end electronics retail solution: catalog, cart, payments, real-time inventory</li><li>D365 Integration Portals — self-service web portals with automated Microsoft Dynamics 365 data sync</li><li>Hospital Management System — patient records, receipt/invoice generation, and appointment scheduling</li></ul></div></div>
+      <div class="tl-item"><div class="tl-date">Apr 2022 — Feb 2023</div><div><div class="tl-role">Software Developer</div><div class="tl-org">Anvil Shield Group</div><p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Contributed to enterprise payment systems, ensuring robust functionality, security, and scalability, while mentoring junior developers.</p><ul><li><strong style="color:var(--ink)">Payment Systems Development:</strong> Designed and developed critical API endpoints for payment processing, ensuring secure transactions, data integrity, and compliance with financial service standards</li><li><strong style="color:var(--ink)">Code Quality &amp; Review:</strong> Conducted source code reviews, managed version control workflows, and enforced coding standards across the codebase</li><li><strong style="color:var(--ink)">Feature Development:</strong> Led design and implementation of new features while optimizing existing components for performance and user experience</li><li><strong style="color:var(--ink)">Technical Mentorship:</strong> Mentored junior developers on best practices, design patterns, and development methodology</li><li><strong style="color:var(--ink)">Quality Assurance:</strong> Participated in UAT to validate functionality, identify edge cases, and ensure production-ready code</li></ul></div></div>
+      <div class="tl-item"><div class="tl-date">Apr 2021 — Apr 2022</div><div><div class="tl-role">Systems Developer</div><div class="tl-org">Smart Applications International Group</div><p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Developed enterprise web solutions and integration systems for smart card management platforms.</p><ul><li><strong style="color:var(--ink)">Web Portal Development:</strong> Designed, developed, and deployed user-facing portals that streamlined smart card management operations and improved operational efficiency</li><li><strong style="color:var(--ink)">Integration Architecture:</strong> Built integration endpoints and APIs for reliable data exchange between smart card systems and external platforms</li><li><strong style="color:var(--ink)">Technical Mentorship:</strong> Guided junior developers through code reviews and technical challenges</li></ul></div></div>
+      <div class="tl-item"><div class="tl-date">Oct 2018 — Feb 2021</div><div><div class="tl-role">Web Applications Developer</div><div class="tl-org">Dynasoft Business Solutions Ltd</div><p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Developed integrated web solutions connecting Microsoft Dynamics NAV ERP with custom portals and third-party services.</p><ul><li><strong style="color:var(--ink)">ERP Portal Development:</strong> Built web portals enabling seamless access to Board Management modules within Microsoft Dynamics NAV</li><li><strong style="color:var(--ink)">Systems Integration:</strong> Integrated Dynamics NAV ERP with SMS gateway providers for automated bulk messaging</li><li><strong style="color:var(--ink)">Feature Development &amp; Maintenance:</strong> Delivered new functionality against business requirements, with ongoing support, bug fixes, and optimizations</li></ul></div></div>
+      <div class="tl-item"><div class="tl-date">May 2017 — Oct 2018</div><div><div class="tl-role">Systems Developer</div><div class="tl-org">Surestep Systems and Solutions Ltd</div><p style="font-size:14px;color:var(--ink-dim);font-style:italic;margin-bottom:10px">Developed internal web solutions integrated with Microsoft Dynamics NAV ERP to digitize HR processes and reduce manual administrative overhead.</p><ul><li><strong style="color:var(--ink)">Employee Self-Service Portal:</strong> Automated time and attendance tracking, replacing manual login processes and improving workforce-management accuracy</li><li><strong style="color:var(--ink)">ERP Integration:</strong> Built the portal's integration with Dynamics NAV, giving employees remote access to leave applications, P9 tax forms, and payslips</li><li><strong style="color:var(--ink)">Digital Transformation:</strong> Digitized manual HR processes, enabling anytime-anywhere access to employee information</li></ul></div></div>
     </div>
   </div>
 </section>
 
 <section class="section" id="education">
   <div class="wrap">
-    <div class="section-head">
-      <span class="section-num">04</span>
-      <h2>Education</h2>
-    </div>
-    <div class="ledger-row">
-      <span class="ledger-label">BSc. Computer Science — Kenyatta University<span class="ledger-sub">School of Engineering and Technology · Specialization: Software Development · 2nd Class Honours, Upper Division</span></span>
-      <span class="ledger-leader"></span>
-      <span class="ledger-value">2011–2015</span>
-    </div>
+    <div class="section-head"><span class="section-num">04</span><h2>Education</h2></div>
+    <div class="ledger-row"><span class="ledger-label">BSc. Computer Science — Kenyatta University<span class="ledger-sub">School of Engineering and Technology · Specialization: Software Development · 2nd Class Honours, Upper Division</span></span><span class="ledger-leader"></span><span class="ledger-value">2011–2015</span></div>
   </div>
 </section>
 
 <footer class="footer" id="contact">
   <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;width:100%">
     <div class="footer-mono">Nairobi, Kenya · <a href="mailto:shawnmbuvi@gmail.com">shawnmbuvi@gmail.com</a> · +254 731 628 560</div>
-    <div class="footer-mono"><a href="https://github.com/Shawn72" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/shawn-andre-mbuvi-02062682/" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="footer-mono"><a href="https://github.com/Shawn72" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/shawn-andre-mbuvi-02062682/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://urbanfantasy.ninjaxco.com/" target="_blank" rel="noopener">Author Site</a></div>
   </div>
 </footer>
 
